@@ -1,16 +1,12 @@
-<<<<<<< HEAD
-[gd_scene load_steps=6 format=3 uid="uid://hpmpo43lw1ob"]
-=======
 [gd_scene load_steps=11 format=3 uid="uid://cdhrsm0ncjnqk"]
->>>>>>> ccc6a40 (Level 1)
 
 [ext_resource type="PackedScene" uid="uid://c8e45ixnq5udi" path="res://scenes/xylophone.tscn" id="1_6oknu"]
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_f0qkq"]
 [ext_resource type="AudioStream" uid="uid://c73l6eedf2mu5" path="res://audio/fanfare.mp3" id="3_6roj2"]
-[ext_resource type="Texture2D" uid="uid://gur4abltnuy7" path="res://assets/Opendoor.png" id="3_7gjnu"]
+[ext_resource type="Texture2D" uid="uid://bsa7xryk4t1u3" path="res://assets/Opendoor.png" id="3_7gjnu"]
 [ext_resource type="AudioStream" uid="uid://dpec5jws8ypco" path="res://audio/xylophone/204646__juancamiloorjuela__xylophone-c4.wav" id="4_f3jp3"]
 [ext_resource type="AudioStream" uid="uid://ccqmtayv4t2rk" path="res://audio/xylophone/204644__juancamiloorjuela__xylophone-e4.wav" id="5_bey0r"]
-[ext_resource type="Texture2D" uid="uid://tdsry1ya3snf" path="res://assets/closeddoor.png" id="6_xmi5c"]
+[ext_resource type="Texture2D" uid="uid://ddu1s2gbxxxtl" path="res://assets/closeddoor.png" id="6_xmi5c"]
 [ext_resource type="Script" path="res://scripts/play_background.gd" id="7_fcxdv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nacj1"]

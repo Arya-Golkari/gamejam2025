@@ -20,6 +20,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	print(notes)
 	if notes.slice(-6, notes.size()+1) == ["E4", "C4", "C4", "E4", "E4", "C4"]:
 		timer.start(1)
 		fanfare_player.play()
