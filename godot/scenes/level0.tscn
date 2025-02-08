@@ -8,7 +8,7 @@
 size = Vector2(51, 43)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_noju2"]
-size = Vector2(1206.37, 28.625)
+size = Vector2(1240.69, 43.6875)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_amtew")
@@ -29,5 +29,6 @@ shape = SubResource("RectangleShape2D_bvg63")
 position = Vector2(1001, 1097)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(-27.45, -12.05)
 scale = Vector2(1.6, 1.6)
 shape = SubResource("RectangleShape2D_noju2")
