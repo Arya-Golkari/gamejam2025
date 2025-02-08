@@ -1,6 +1,6 @@
 extends Node2D
 
-signal xylophone_c4
+signal xylophone_note(note: String)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,5 +11,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_xylophone_c4() -> void:
-	emit_signal("xylophone_c4")
+
+func _on_xylophone_note(note: String) -> void:
+	emit_signal("xylophone_note", note)

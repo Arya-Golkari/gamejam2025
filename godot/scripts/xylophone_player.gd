@@ -10,7 +10,7 @@ var audio_player : AudioStreamPlayer
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			emit_signal("xylophone_c4")
+			emit_signal("xylophone_note", note)
 			audio_player.play()
 
 
