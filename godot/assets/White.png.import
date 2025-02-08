@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddu1s2gbxxxtl"
-path="res://.godot/imported/closeddoor.png-e397f46ee13af2295ccfbb1bec76f920.ctex"
+uid="uid://cqhqprsp2ove5"
+path="res://.godot/imported/White.png-61df94c224378dce99890167b7b5eef9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/closeddoor.png"
-dest_files=["res://.godot/imported/closeddoor.png-e397f46ee13af2295ccfbb1bec76f920.ctex"]
+source_file="res://assets/White.png"
+dest_files=["res://.godot/imported/White.png-61df94c224378dce99890167b7b5eef9.ctex"]
 
 [params]
 

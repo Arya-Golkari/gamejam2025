@@ -1,17 +1,34 @@
+<<<<<<< HEAD
 [gd_scene load_steps=6 format=3 uid="uid://hpmpo43lw1ob"]
+=======
+[gd_scene load_steps=11 format=3 uid="uid://cdhrsm0ncjnqk"]
+>>>>>>> ccc6a40 (Level 1)
 
 [ext_resource type="PackedScene" uid="uid://c8e45ixnq5udi" path="res://scenes/xylophone.tscn" id="1_6oknu"]
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_f0qkq"]
 [ext_resource type="AudioStream" uid="uid://c73l6eedf2mu5" path="res://audio/fanfare.mp3" id="3_6roj2"]
+[ext_resource type="Texture2D" uid="uid://gur4abltnuy7" path="res://assets/Opendoor.png" id="3_7gjnu"]
 [ext_resource type="AudioStream" uid="uid://dpec5jws8ypco" path="res://audio/xylophone/204646__juancamiloorjuela__xylophone-c4.wav" id="4_f3jp3"]
 [ext_resource type="AudioStream" uid="uid://ccqmtayv4t2rk" path="res://audio/xylophone/204644__juancamiloorjuela__xylophone-e4.wav" id="5_bey0r"]
+[ext_resource type="Texture2D" uid="uid://tdsry1ya3snf" path="res://assets/closeddoor.png" id="6_xmi5c"]
+[ext_resource type="Script" path="res://scripts/play_background.gd" id="7_fcxdv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nacj1"]
+size = Vector2(243, 305)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_asikx"]
+radius = 70.0
+height = 278.0
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_f0qkq")
+fanfare_player_path = NodePath("Fanfare")
+closed_door = ExtResource("6_xmi5c")
+open_door = ExtResource("3_7gjnu")
 
 [node name="Xylophone" parent="." instance=ExtResource("1_6oknu")]
-position = Vector2(1123, 635)
-scale = Vector2(0.5, 0.5)
+position = Vector2(871, 140)
+scale = Vector2(0.25, 0.25)
 
 [node name="Fanfare" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_6roj2")
@@ -22,4 +39,37 @@ stream = ExtResource("4_f3jp3")
 [node name="XylophoneE4Player" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_bey0r")
 
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(717, 405)
+scale = Vector2(3.05, 3.05)
+texture = ExtResource("6_xmi5c")
+metadata/_edit_lock_ = true
+
+[node name="Door" type="Area2D" parent="."]
+script = ExtResource("7_fcxdv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2(717.5, 414.5)
+shape = SubResource("RectangleShape2D_nacj1")
+
+[node name="LeftStatue" type="Area2D" parent="."]
+script = ExtResource("7_fcxdv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftStatue"]
+position = Vector2(318, 511)
+shape = SubResource("CapsuleShape2D_asikx")
+
+[node name="RightStatue" type="Area2D" parent="."]
+script = ExtResource("7_fcxdv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightStatue"]
+position = Vector2(1112, 510)
+shape = SubResource("CapsuleShape2D_asikx")
+
 [connection signal="xylophone_note" from="Xylophone" to="." method="_on_xylophone_note"]
+[connection signal="play_background" from="Door" to="." method="_on_play_background"]
+[connection signal="play_background" from="LeftStatue" to="." method="_on_play_background"]
+[connection signal="play_background" from="RightStatue" to="." method="_on_play_background"]
