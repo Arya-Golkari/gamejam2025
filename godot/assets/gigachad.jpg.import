@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cuwd0xhivwv2s"
-path="res://.godot/imported/gigachad.jpg-95ace61664ba19a6d136c201f36d22f4.ctex"
+path="res://.godot/imported/gigachad.jpg-109c27cd9225c805082ae543a14087a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gigachad.jpg"
-dest_files=["res://.godot/imported/gigachad.jpg-95ace61664ba19a6d136c201f36d22f4.ctex"]
+source_file="res://assets/gigachad.jpg"
+dest_files=["res://.godot/imported/gigachad.jpg-109c27cd9225c805082ae543a14087a1.ctex"]
 
 [params]
 

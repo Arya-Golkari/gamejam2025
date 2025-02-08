@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c7tas43kkdhvk"]
 
-[ext_resource type="Texture2D" uid="uid://cuwd0xhivwv2s" path="res://gigachad.jpg" id="1_8jegh"]
+[ext_resource type="Texture2D" uid="uid://cuwd0xhivwv2s" path="res://assets/gigachad.jpg" id="1_4cj8u"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -14,4 +14,4 @@ offset_bottom = 180.0
 
 [node name="Gigachad" type="Sprite2D" parent="."]
 position = Vector2(-3, 48)
-texture = ExtResource("1_8jegh")
+texture = ExtResource("1_4cj8u")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://7pyej7bxnrwc"]
 
-[ext_resource type="Script" path="res://select.gd" id="1_cyk7l"]
+[ext_resource type="Script" path="res://scripts/select.gd" id="1_3tt1i"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -37,6 +37,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 71
 text = "Play"
-script = ExtResource("1_cyk7l")
+script = ExtResource("1_3tt1i")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
