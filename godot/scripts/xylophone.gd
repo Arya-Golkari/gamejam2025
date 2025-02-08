@@ -1,11 +1,6 @@
-extends Area2D
+extends Node2D
 
-@onready var audio_player = $XylophoneE4Player
-
-func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			audio_player.play()
+signal xylophone_c4
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,3 +10,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func _on_xylophone_c4() -> void:
+	emit_signal("xylophone_c4")

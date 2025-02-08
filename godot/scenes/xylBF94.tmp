@@ -1,11 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://c8e45ixnq5udi"]
+[gd_scene load_steps=17 format=3 uid="uid://c8e45ixnq5udi"]
 
 [ext_resource type="Texture2D" uid="uid://vdwr746cya5n" path="res://assets/xylophone.jpg" id="1_8qkrq"]
+[ext_resource type="Script" path="res://scripts/xylophone_c4.gd" id="2_mayrx"]
 [ext_resource type="AudioStream" uid="uid://dpec5jws8ypco" path="res://audio/xylophone/204646__juancamiloorjuela__xylophone-c4.wav" id="3_h2r2r"]
-[ext_resource type="Script" path="res://scripts/xylophone_player.gd" id="3_pkcqx"]
+[ext_resource type="Script" path="res://scripts/xylophone_d4.gd" id="4_en00g"]
 [ext_resource type="AudioStream" uid="uid://bcd3bxh04gd0o" path="res://audio/xylophone/204645__juancamiloorjuela__xylophone-d4.wav" id="5_y5uu0"]
+[ext_resource type="Script" path="res://scripts/xylophone_e4.gd" id="6_8c5mj"]
 [ext_resource type="AudioStream" uid="uid://ccqmtayv4t2rk" path="res://audio/xylophone/204644__juancamiloorjuela__xylophone-e4.wav" id="7_cbbok"]
+[ext_resource type="Script" path="res://scripts/xylophone_f4.gd" id="8_8yhj5"]
 [ext_resource type="AudioStream" uid="uid://k1dx75jgx538" path="res://audio/xylophone/204643__juancamiloorjuela__xylophone-f4.wav" id="9_t7vif"]
+[ext_resource type="Script" path="res://xylophone_g4.gd" id="10_4a4no"]
 [ext_resource type="AudioStream" uid="uid://6q8efeu1vr7c" path="res://audio/xylophone/204648__juancamiloorjuela__xylophone-g4.wav" id="10_uhycc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ew3k2"]
@@ -30,61 +34,53 @@ position = Vector2(586, 317)
 texture = ExtResource("1_8qkrq")
 
 [node name="C4" type="Area2D" parent="Xylophone"]
-script = ExtResource("3_pkcqx")
-note = "C4"
-audio_player_path = NodePath("../XylophoneC4Player")
+script = ExtResource("2_mayrx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Xylophone/C4"]
 position = Vector2(-203, 1)
 shape = SubResource("RectangleShape2D_ew3k2")
 
+[node name="XylophoneC4Player" type="AudioStreamPlayer" parent="Xylophone/C4"]
+stream = ExtResource("3_h2r2r")
+
 [node name="D4" type="Area2D" parent="Xylophone"]
-script = ExtResource("3_pkcqx")
-note = "D4"
-audio_player_path = NodePath("../XylophoneD4Player")
+script = ExtResource("4_en00g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Xylophone/D4"]
 position = Vector2(-108, 2.5)
 shape = SubResource("RectangleShape2D_cab08")
 
+[node name="XylophoneD4Player" type="AudioStreamPlayer" parent="Xylophone/D4"]
+stream = ExtResource("5_y5uu0")
+
 [node name="E4" type="Area2D" parent="Xylophone"]
-script = ExtResource("3_pkcqx")
-note = "E4"
-audio_player_path = NodePath("../XylophoneE4Player")
+script = ExtResource("6_8c5mj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Xylophone/E4"]
 position = Vector2(-16, 0)
 shape = SubResource("RectangleShape2D_xx1ki")
 
+[node name="XylophoneE4Player" type="AudioStreamPlayer" parent="Xylophone/E4"]
+stream = ExtResource("7_cbbok")
+
 [node name="F4" type="Area2D" parent="Xylophone"]
-script = ExtResource("3_pkcqx")
-note = "F4"
-audio_player_path = NodePath("../XylophoneF4Player")
+script = ExtResource("8_8yhj5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Xylophone/F4"]
 position = Vector2(79, 2.5)
 shape = SubResource("RectangleShape2D_oscxk")
 
+[node name="XylophoneF4Player" type="AudioStreamPlayer2D" parent="Xylophone/F4"]
+stream = ExtResource("9_t7vif")
+
 [node name="G4" type="Area2D" parent="Xylophone"]
-script = ExtResource("3_pkcqx")
-note = "G4"
-audio_player_path = NodePath("../XylophoneG4Player")
+script = ExtResource("10_4a4no")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Xylophone/G4"]
 position = Vector2(174, 3)
 shape = SubResource("RectangleShape2D_27kgx")
 
-[node name="XylophoneC4Player" type="AudioStreamPlayer" parent="Xylophone"]
-stream = ExtResource("3_h2r2r")
-
-[node name="XylophoneD4Player" type="AudioStreamPlayer" parent="Xylophone"]
-stream = ExtResource("5_y5uu0")
-
-[node name="XylophoneE4Player" type="AudioStreamPlayer" parent="Xylophone"]
-stream = ExtResource("7_cbbok")
-
-[node name="XylophoneF4Player" type="AudioStreamPlayer" parent="Xylophone"]
-stream = ExtResource("9_t7vif")
-
-[node name="XylophoneG4Player" type="AudioStreamPlayer" parent="Xylophone"]
+[node name="XylophoneG4Player" type="AudioStreamPlayer" parent="Xylophone/G4"]
 stream = ExtResource("10_uhycc")
+
+[connection signal="xylophone_c4" from="Xylophone/C4" to="." method="_on_xylophone_c4"]
