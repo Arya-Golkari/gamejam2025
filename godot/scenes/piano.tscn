@@ -1,0 +1,117 @@
+[gd_scene load_steps=15 format=3 uid="uid://uq0rk3hmfud6"]
+
+[ext_resource type="Texture2D" uid="uid://cq43j151xv1fk" path="res://assets/Piano.png" id="1_2vm3l"]
+[ext_resource type="Script" path="res://scripts/xylophone_player.gd" id="2_f7dfr"]
+[ext_resource type="AudioStream" uid="uid://yrbuox08yjn3" path="res://audio/piano/334538__teddy_frost__c4.wav" id="3_xfklv"]
+[ext_resource type="AudioStream" uid="uid://d0ytgqk63d1lj" path="res://audio/piano/334536__teddy_frost__piano-normal-d4.wav" id="4_5k65m"]
+[ext_resource type="AudioStream" uid="uid://cj8xbbn6q6ojk" path="res://audio/piano/334542__teddy_frost__e4.wav" id="5_xaid8"]
+[ext_resource type="AudioStream" uid="uid://bbcptgisp0h3i" path="res://audio/piano/334541__teddy_frost__f4.wav" id="6_pqci0"]
+[ext_resource type="AudioStream" uid="uid://bv2vtkawhn0hh" path="res://audio/piano/334540__teddy_frost__g4.wav" id="7_5cqsp"]
+[ext_resource type="AudioStream" uid="uid://dwxxaqc6iux2m" path="res://audio/piano/334534__teddy_frost__piano-a4-sound.wav" id="8_a2r8n"]
+[ext_resource type="AudioStream" uid="uid://budbagm5mo0p5" path="res://audio/piano/334539__teddy_frost__b4.wav" id="9_a1ru3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ew3k2"]
+size = Vector2(15.3333, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cab08"]
+size = Vector2(17.1667, 103.833)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xx1ki"]
+size = Vector2(17, 103)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oscxk"]
+size = Vector2(16, 104.333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27kgx"]
+size = Vector2(16.3333, 104.667)
+
+[node name="Piano" type="Node2D"]
+
+[node name="Piano" type="Sprite2D" parent="."]
+position = Vector2(586, 317)
+scale = Vector2(3, 3)
+texture = ExtResource("1_2vm3l")
+
+[node name="C4" type="Area2D" parent="Piano"]
+script = ExtResource("2_f7dfr")
+note = "C4"
+audio_player_path = NodePath("../XylophoneC4Player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piano/C4"]
+position = Vector2(-50, -5.66667)
+shape = SubResource("RectangleShape2D_ew3k2")
+
+[node name="D4" type="Area2D" parent="Piano"]
+script = ExtResource("2_f7dfr")
+note = "D4"
+audio_player_path = NodePath("../XylophoneD4Player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piano/D4"]
+position = Vector2(-33.25, -6)
+shape = SubResource("RectangleShape2D_cab08")
+
+[node name="E4" type="Area2D" parent="Piano"]
+script = ExtResource("2_f7dfr")
+note = "E4"
+audio_player_path = NodePath("../XylophoneE4Player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piano/E4"]
+position = Vector2(-15.5, -5.83334)
+shape = SubResource("RectangleShape2D_xx1ki")
+
+[node name="F4" type="Area2D" parent="Piano"]
+script = ExtResource("2_f7dfr")
+note = "F4"
+audio_player_path = NodePath("../XylophoneF4Player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piano/F4"]
+position = Vector2(1, -5.16667)
+shape = SubResource("RectangleShape2D_oscxk")
+
+[node name="G4" type="Area2D" parent="Piano"]
+script = ExtResource("2_f7dfr")
+note = "G4"
+audio_player_path = NodePath("../XylophoneG4Player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piano/G4"]
+position = Vector2(17.8333, -5.33334)
+shape = SubResource("RectangleShape2D_27kgx")
+
+[node name="A4" type="Area2D" parent="Piano"]
+script = ExtResource("2_f7dfr")
+note = "A4"
+audio_player_path = NodePath("../XylophoneA4Player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piano/A4"]
+position = Vector2(35, -5.66667)
+shape = SubResource("RectangleShape2D_27kgx")
+
+[node name="B4" type="Area2D" parent="Piano"]
+script = ExtResource("2_f7dfr")
+note = "A4"
+audio_player_path = NodePath("../XylophoneB4Player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piano/B4"]
+position = Vector2(52, -5.33334)
+shape = SubResource("RectangleShape2D_27kgx")
+
+[node name="XylophoneC4Player" type="AudioStreamPlayer" parent="Piano"]
+stream = ExtResource("3_xfklv")
+
+[node name="XylophoneD4Player" type="AudioStreamPlayer" parent="Piano"]
+stream = ExtResource("4_5k65m")
+
+[node name="XylophoneE4Player" type="AudioStreamPlayer" parent="Piano"]
+stream = ExtResource("5_xaid8")
+
+[node name="XylophoneF4Player" type="AudioStreamPlayer" parent="Piano"]
+stream = ExtResource("6_pqci0")
+
+[node name="XylophoneG4Player" type="AudioStreamPlayer" parent="Piano"]
+stream = ExtResource("7_5cqsp")
+
+[node name="XylophoneA4Player" type="AudioStreamPlayer" parent="Piano"]
+stream = ExtResource("8_a2r8n")
+
+[node name="XylophoneB4Player" type="AudioStreamPlayer" parent="Piano"]
+stream = ExtResource("9_a1ru3")
