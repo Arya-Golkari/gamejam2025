@@ -1,17 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7tas43kkdhvk"]
-
-[ext_resource type="Texture2D" uid="uid://cuwd0xhivwv2s" path="res://assets/gigachad.jpg" id="1_4cj8u"]
+[gd_scene format=3 uid="uid://c7tas43kkdhvk"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -278.0
-offset_top = -139.0
-offset_right = 83.0
-offset_bottom = 180.0
-
-[node name="Gigachad" type="Sprite2D" parent="."]
-position = Vector2(-3, 48)
-texture = ExtResource("1_4cj8u")
+offset_left = 190.0
+offset_top = 2.0
+offset_right = 551.0
+offset_bottom = 321.0

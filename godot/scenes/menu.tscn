@@ -15,12 +15,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -210.0
-offset_right = 210.0
-offset_bottom = 161.0
+offset_left = -295.0
+offset_right = 372.0
+offset_bottom = 129.0
 grow_horizontal = 2
 theme_override_font_sizes/normal_font_size = 91
-text = "Game"
+text = "Chromesthesia"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1

@@ -1,0 +1,67 @@
+[gd_scene load_steps=13 format=3 uid="uid://c8e45ixnq5udi"]
+
+[ext_resource type="Texture2D" uid="uid://vdwr746cya5n" path="res://assets/xylophone.jpg" id="1_8qkrq"]
+[ext_resource type="Script" path="res://scenes/xylophone_c4.gd" id="2_mayrx"]
+[ext_resource type="AudioStream" uid="uid://dpec5jws8ypco" path="res://audio/xylophone/204646__juancamiloorjuela__xylophone-c4.wav" id="3_h2r2r"]
+[ext_resource type="Script" path="res://scenes/xylophone_d4.gd" id="4_en00g"]
+[ext_resource type="AudioStream" uid="uid://bcd3bxh04gd0o" path="res://audio/xylophone/204645__juancamiloorjuela__xylophone-d4.wav" id="5_y5uu0"]
+[ext_resource type="Script" path="res://scenes/xylophone_e4.gd" id="6_8c5mj"]
+[ext_resource type="AudioStream" uid="uid://ccqmtayv4t2rk" path="res://audio/xylophone/204644__juancamiloorjuela__xylophone-e4.wav" id="7_cbbok"]
+[ext_resource type="Script" path="res://scenes/xylophone_f4.gd" id="8_8yhj5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ew3k2"]
+size = Vector2(68, 322)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cab08"]
+size = Vector2(70, 277)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xx1ki"]
+size = Vector2(70, 238)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oscxk"]
+size = Vector2(68, 205)
+
+[node name="Xylophone" type="Node2D"]
+
+[node name="Xylophone" type="Sprite2D" parent="."]
+position = Vector2(586, 317)
+texture = ExtResource("1_8qkrq")
+
+[node name="C4" type="Area2D" parent="Xylophone"]
+script = ExtResource("2_mayrx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Xylophone/C4"]
+position = Vector2(-203, 1)
+shape = SubResource("RectangleShape2D_ew3k2")
+
+[node name="XylophoneC4Player" type="AudioStreamPlayer" parent="Xylophone/C4"]
+stream = ExtResource("3_h2r2r")
+
+[node name="D4" type="Area2D" parent="Xylophone"]
+script = ExtResource("4_en00g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Xylophone/D4"]
+position = Vector2(-108, 2.5)
+shape = SubResource("RectangleShape2D_cab08")
+
+[node name="XylophoneD4Player" type="AudioStreamPlayer" parent="Xylophone/D4"]
+stream = ExtResource("5_y5uu0")
+
+[node name="E4" type="Area2D" parent="Xylophone"]
+script = ExtResource("6_8c5mj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Xylophone/E4"]
+position = Vector2(-16, 0)
+shape = SubResource("RectangleShape2D_xx1ki")
+
+[node name="XylophoneE4Player" type="AudioStreamPlayer" parent="Xylophone/E4"]
+stream = ExtResource("7_cbbok")
+
+[node name="F4" type="Area2D" parent="Xylophone"]
+script = ExtResource("8_8yhj5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Xylophone/F4"]
+position = Vector2(79, 2.5)
+shape = SubResource("RectangleShape2D_oscxk")
+
+[node name="XylophoneF4Player" type="AudioStreamPlayer2D" parent="Xylophone/F4"]
