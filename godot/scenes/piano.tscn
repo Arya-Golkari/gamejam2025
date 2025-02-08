@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://uq0rk3hmfud6"]
+[gd_scene load_steps=15 format=3 uid="uid://cxw0dc0jv0n71"]
 
-[ext_resource type="Texture2D" uid="uid://cq43j151xv1fk" path="res://assets/Piano.png" id="1_2vm3l"]
+[ext_resource type="Texture2D" uid="uid://jpdwdnl6g44y" path="res://assets/Piano.png" id="1_2vm3l"]
 [ext_resource type="Script" path="res://scripts/xylophone_player.gd" id="2_f7dfr"]
 [ext_resource type="AudioStream" uid="uid://yrbuox08yjn3" path="res://audio/piano/334538__teddy_frost__c4.wav" id="3_xfklv"]
 [ext_resource type="AudioStream" uid="uid://d0ytgqk63d1lj" path="res://audio/piano/334536__teddy_frost__piano-normal-d4.wav" id="4_5k65m"]

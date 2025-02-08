@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdhrsm0ncjnqk"]
+[gd_scene load_steps=6 format=3 uid="uid://hpmpo43lw1ob"]
 
 [ext_resource type="PackedScene" uid="uid://c8e45ixnq5udi" path="res://scenes/xylophone.tscn" id="1_6oknu"]
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_f0qkq"]
