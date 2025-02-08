@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 400
+@export var speed = 800
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,9 +13,8 @@ func _physics_process(delta: float) -> void:
 
 	velocity += delta * get_gravity() * 10
 
-	if Input.is_action_pressed("Jump"):
-		print("test")
-		velocity.y = -1000
+	if is_on_floor() and Input.is_action_pressed("Jump"):
+		velocity.y = -2000
 
 	move_and_slide()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
