@@ -7,8 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bvg63"]
 size = Vector2(51, 43)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_noju2"]
-size = Vector2(1240.69, 43.6875)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jx8xh"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_amtew")
@@ -28,7 +27,10 @@ shape = SubResource("RectangleShape2D_bvg63")
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(1001, 1097)
 
+[node name="Gigachad" type="Sprite2D" parent="Ground"]
+position = Vector2(1, 17)
+scale = Vector2(7.035, 0.11)
+texture = ExtResource("1_cy1qb")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2(-27.45, -12.05)
-scale = Vector2(1.6, 1.6)
-shape = SubResource("RectangleShape2D_noju2")
+shape = SubResource("WorldBoundaryShape2D_jx8xh")
