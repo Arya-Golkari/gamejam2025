@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cuwd0xhivwv2s" path="res://assets/gigachad.jpg" id="1_cy1qb"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_hffgy"]
 [ext_resource type="PackedScene" uid="uid://c8e45ixnq5udi" path="res://scenes/xylophone.tscn" id="4_akv5a"]
-[ext_resource type="Texture2D" uid="uid://4yfpb114diqa" path="res://assets/closeddoor.png" id="5_420x3"]
+[ext_resource type="Texture2D" uid="uid://ddu1s2gbxxxtl" path="res://assets/closeddoor.png" id="5_420x3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bvg63"]
 size = Vector2(64.5, 119.5)

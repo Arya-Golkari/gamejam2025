@@ -12,6 +12,7 @@ var fanfare_done : bool = false
 
 @onready var c4_player : AudioStreamPlayer = $XylophoneC4Player
 @onready var e4_player : AudioStreamPlayer = $XylophoneE4Player
+@onready var g4_player : AudioStreamPlayer = $XylophoneG4Player
 @onready var timer : Timer = $Timer
 @onready var background : Sprite2D = $Background
 
@@ -23,7 +24,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if (notes.slice(-6, notes.size()+1) == ["E4", "C4", "C4", "E4", "E4", "C4"]) and (not fanfare_done):
+	if (notes.slice(-7, notes.size()+1) == ["C4", "E4", "G4", "E4", "G4", "E4", "C4"]) and (not fanfare_done):
 		done = true
 		
 	if done and (not fanfare_done):
@@ -46,15 +47,17 @@ func fanfare() -> void:
 
 
 func play_random() -> void:
-	var random_int = randi_range(0, 1)
+	var random_int = randi_range(0, 2)
 	if random_int == 0:
 		c4_player.play()
-	else:
+	elif random_int == 1:
 		e4_player.play()
+	else:
+		g4_player.play()
 
 
 func background_music() -> void:
-	for i in range(7):
+	for i in range(5):
 		timer.start(0.5)
 		play_random()
 		
