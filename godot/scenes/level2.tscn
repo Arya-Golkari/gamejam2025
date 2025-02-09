@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cec5a8fd51lyh"]
+[gd_scene load_steps=19 format=3 uid="uid://cec5a8fd51lyh"]
 
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_bda2s"]
 [ext_resource type="Texture2D" uid="uid://ddu1s2gbxxxtl" path="res://assets/closeddoor.png" id="2_u37lq"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://d2dmeo5t0ymat" path="res://assets/Green.png" id="9_bjbsy"]
 [ext_resource type="Texture2D" uid="uid://bgfpuukppatll" path="res://assets/Red.png" id="10_qwnot"]
 [ext_resource type="Texture2D" uid="uid://blqs17fw8cbnf" path="res://assets/Blue.png" id="11_mdq2m"]
+[ext_resource type="PackedScene" uid="uid://c1obylkuev73w" path="res://scenes/player.tscn" id="13_twwih"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nacj1"]
 size = Vector2(243, 305)
@@ -19,6 +20,15 @@ size = Vector2(243, 305)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_asikx"]
 radius = 70.0
 height = 278.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xtal"]
+size = Vector2(57, 788)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfltp"]
+size = Vector2(57, 788)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vvqe"]
+size = Vector2(1905, 85.5)
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_bda2s")
@@ -107,6 +117,28 @@ position = Vector2(619, 79)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("11_mdq2m")
 
+[node name="WallLeft" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
+position = Vector2(-42.5, 391)
+shape = SubResource("RectangleShape2D_7xtal")
+
+[node name="WallRight" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
+position = Vector2(1477, 390)
+shape = SubResource("RectangleShape2D_tfltp")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(772.5, 775.75)
+shape = SubResource("RectangleShape2D_5vvqe")
+
+[node name="Player" parent="." instance=ExtResource("13_twwih")]
+position = Vector2(659, 523)
+scale = Vector2(0.3, 0.3)
+
 [connection signal="xylophone_note" from="Xylophone" to="." method="_on_xylophone_note"]
 [connection signal="mouse_entered" from="Door" to="Door" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Door" to="Door" method="_on_mouse_exited"]
@@ -117,3 +149,4 @@ texture = ExtResource("11_mdq2m")
 [connection signal="mouse_entered" from="RightStatue" to="RightStatue" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="RightStatue" to="RightStatue" method="_on_mouse_exited"]
 [connection signal="play_background" from="RightStatue" to="." method="_on_play_background"]
+[connection signal="ready_to_leave" from="Player" to="." method="_on_player_ready_to_leave"]
