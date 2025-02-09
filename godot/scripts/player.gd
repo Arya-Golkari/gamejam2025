@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal ready_to_leave
+
 @export var speed = 800
 @export var walking : Texture2D
 @export var jumping : Texture2D
@@ -33,6 +35,9 @@ func _physics_process(delta: float) -> void:
 			nextScene = "res://scenes/level1.tscn"
 			
 		get_tree().change_scene_to_file(nextScene)
+		
+	if (520 < global_position.x) and (global_position.x < 660) and (not is_on_floor()):
+		emit_signal("ready_to_leave")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

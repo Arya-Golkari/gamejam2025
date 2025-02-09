@@ -105,7 +105,7 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_6hkc8")
 
 [node name="Player" parent="." instance=ExtResource("11_fpnsj")]
-position = Vector2(-25, 532)
+position = Vector2(643, 529)
 scale = Vector2(0.3, 0.3)
 
 [node name="Ground" type="StaticBody2D" parent="."]
@@ -120,6 +120,12 @@ shape = SubResource("RectangleShape2D_mnqep")
 position = Vector2(-42.5, 391)
 shape = SubResource("RectangleShape2D_jursc")
 
+[node name="WallRight" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
+position = Vector2(1477, 390)
+shape = SubResource("RectangleShape2D_jursc")
+
 [connection signal="xylophone_note" from="Xylophone" to="." method="_on_xylophone_note"]
 [connection signal="mouse_entered" from="Door" to="Door" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Door" to="Door" method="_on_mouse_exited"]
@@ -130,3 +136,4 @@ shape = SubResource("RectangleShape2D_jursc")
 [connection signal="mouse_entered" from="RightStatue" to="RightStatue" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="RightStatue" to="RightStatue" method="_on_mouse_exited"]
 [connection signal="play_background" from="RightStatue" to="." method="_on_play_background"]
+[connection signal="ready_to_leave" from="Player" to="." method="_on_player_ready_to_leave"]
