@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=3 uid="uid://7pyej7bxnrwc"]
 
 [ext_resource type="Script" path="res://scripts/select.gd" id="1_3tt1i"]
-[ext_resource type="Texture2D" uid="uid://bofg33ixyod76" path="res://assets/Title.png" id="2_8v5pc"]
-[ext_resource type="Texture2D" uid="uid://iucc6bj104wa" path="res://assets/playbutton.png" id="3_pk3g7"]
+[ext_resource type="Texture2D" uid="uid://bomrjv666phi4" path="res://assets/playbutton.png" id="3_pk3g7"]
 [ext_resource type="Script" path="res://scenes/animated_sprite_2d.gd" id="3_yslg3"]
 [ext_resource type="Texture2D" uid="uid://brlq0sgoadxs" path="res://assets/backgroundmaij.png" id="5_hibnb"]
+[ext_resource type="Texture2D" uid="uid://c6s38nk47he48" path="res://assets/title2.png" id="5_rqn1h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lcocd"]
 atlas = ExtResource("3_pk3g7")
@@ -71,11 +71,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Sprite2D" parent="."]
-position = Vector2(717, 70)
-scale = Vector2(2.66667, 2.66667)
-texture = ExtResource("2_8v5pc")
-
 [node name="Button2" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
@@ -99,5 +94,10 @@ z_index = -3
 position = Vector2(719.5, 404)
 scale = Vector2(3.03125, 3.34146)
 texture = ExtResource("5_hibnb")
+
+[node name="Title2" type="Sprite2D" parent="."]
+position = Vector2(752, 153)
+scale = Vector2(2.58333, 2.8)
+texture = ExtResource("5_rqn1h")
 
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
