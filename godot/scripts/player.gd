@@ -34,7 +34,6 @@ func _physics_process(delta: float) -> void:
 			
 		get_tree().change_scene_to_file(nextScene)
 
->>>>>>> f7125b5 (Player kinematics)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
