@@ -1,8 +1,8 @@
 [gd_scene load_steps=19 format=3 uid="uid://cec5a8fd51lyh"]
 
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_bda2s"]
-[ext_resource type="Texture2D" uid="uid://ddu1s2gbxxxtl" path="res://assets/closeddoor.png" id="2_u37lq"]
-[ext_resource type="Texture2D" uid="uid://cv5b6t161oi5q" path="res://assets/Opendoornew.png" id="3_5830q"]
+[ext_resource type="Texture2D" uid="uid://be84j2rhvs1wh" path="res://assets/Room2closedfinal.png" id="2_0t3mm"]
+[ext_resource type="Texture2D" uid="uid://bfoujbagbcwf3" path="res://assets/Room2final.png" id="3_4jbj6"]
 [ext_resource type="PackedScene" uid="uid://c8e45ixnq5udi" path="res://scenes/xylophone.tscn" id="4_eirg8"]
 [ext_resource type="AudioStream" uid="uid://c73l6eedf2mu5" path="res://audio/fanfare.mp3" id="5_xso3o"]
 [ext_resource type="AudioStream" uid="uid://dpec5jws8ypco" path="res://audio/xylophone/204646__juancamiloorjuela__xylophone-c4.wav" id="6_lo4ep"]
@@ -19,7 +19,7 @@ size = Vector2(243, 305)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_asikx"]
 radius = 70.0
-height = 278.0
+height = 198.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xtal"]
 size = Vector2(57, 788)
@@ -33,8 +33,8 @@ size = Vector2(1905, 85.5)
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_bda2s")
 fanfare_player_path = NodePath("Fanfare")
-closed_door = ExtResource("2_u37lq")
-open_door = ExtResource("3_5830q")
+closed_door = ExtResource("2_0t3mm")
+open_door = ExtResource("3_4jbj6")
 
 [node name="Xylophone" parent="." instance=ExtResource("4_eirg8")]
 position = Vector2(871, 140)
@@ -58,7 +58,7 @@ stream = ExtResource("6_ohwbx")
 z_index = -1
 position = Vector2(717, 405)
 scale = Vector2(3.05, 3.05)
-texture = ExtResource("2_u37lq")
+texture = ExtResource("2_0t3mm")
 metadata/_edit_lock_ = true
 
 [node name="Door" type="Area2D" parent="."]
@@ -72,14 +72,14 @@ shape = SubResource("RectangleShape2D_nacj1")
 script = ExtResource("8_3dtdq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftStatue"]
-position = Vector2(318, 511)
+position = Vector2(294, 576)
 shape = SubResource("CapsuleShape2D_asikx")
 
 [node name="RightStatue" type="Area2D" parent="."]
 script = ExtResource("8_3dtdq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightStatue"]
-position = Vector2(1112, 510)
+position = Vector2(1146, 582)
 shape = SubResource("CapsuleShape2D_asikx")
 
 [node name="Green" type="Sprite2D" parent="."]

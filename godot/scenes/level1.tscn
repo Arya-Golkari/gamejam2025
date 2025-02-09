@@ -1,15 +1,16 @@
-[gd_scene load_steps=18 format=3 uid="uid://cdhrsm0ncjnqk"]
+[gd_scene load_steps=19 format=3 uid="uid://cdhrsm0ncjnqk"]
 
 [ext_resource type="PackedScene" uid="uid://c8e45ixnq5udi" path="res://scenes/xylophone.tscn" id="1_6oknu"]
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_f0qkq"]
+[ext_resource type="Texture2D" uid="uid://bg77a6c5i1tb5" path="res://assets/Room1finalclosed.png" id="2_7fhcc"]
 [ext_resource type="AudioStream" uid="uid://c73l6eedf2mu5" path="res://audio/fanfare.mp3" id="3_6roj2"]
-[ext_resource type="Texture2D" uid="uid://cv5b6t161oi5q" path="res://assets/Opendoornew.png" id="3_b7fb4"]
+[ext_resource type="Texture2D" uid="uid://d12a6ek2x317p" path="res://assets/Room1openfinal.png" id="3_dyvus"]
 [ext_resource type="AudioStream" uid="uid://dpec5jws8ypco" path="res://audio/xylophone/204646__juancamiloorjuela__xylophone-c4.wav" id="4_f3jp3"]
 [ext_resource type="AudioStream" uid="uid://ccqmtayv4t2rk" path="res://audio/xylophone/204644__juancamiloorjuela__xylophone-e4.wav" id="5_bey0r"]
 [ext_resource type="Texture2D" uid="uid://ddu1s2gbxxxtl" path="res://assets/closeddoor.png" id="6_xmi5c"]
 [ext_resource type="Script" path="res://scripts/play_background.gd" id="7_fcxdv"]
-[ext_resource type="Texture2D" uid="uid://dsoimlpxbnexl" path="res://assets/Greentorchf.png" id="9_8ad2m"]
-[ext_resource type="Texture2D" uid="uid://bn67bb3l0ukab" path="res://assets/Redtorch.png" id="10_wmhv3"]
+[ext_resource type="Texture2D" uid="uid://mjuhnedfce0p" path="res://assets/Greentorchf.png" id="9_8ad2m"]
+[ext_resource type="Texture2D" uid="uid://maaxpoiychqv" path="res://assets/Redtorch.png" id="10_wmhv3"]
 [ext_resource type="PackedScene" uid="uid://c1obylkuev73w" path="res://scenes/player.tscn" id="11_fpnsj"]
 [ext_resource type="Texture2D" uid="uid://tmjmv0ykv36i" path="res://assets/skeletonline1room1.png" id="12_ajdyq"]
 [ext_resource type="Texture2D" uid="uid://b2vqvis1ajs77" path="res://assets/Skeletonfinalline.png" id="13_nkrs7"]
@@ -30,8 +31,8 @@ size = Vector2(57, 788)
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_f0qkq")
 fanfare_player_path = NodePath("Fanfare")
-closed_door = ExtResource("6_xmi5c")
-open_door = ExtResource("3_b7fb4")
+closed_door = ExtResource("2_7fhcc")
+open_door = ExtResource("3_dyvus")
 
 [node name="Xylophone" parent="." instance=ExtResource("1_6oknu")]
 position = Vector2(867, 156)

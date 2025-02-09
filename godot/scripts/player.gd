@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-	if global_position.x > 1900:
+	if global_position.x > 1350:
 		var curScene = get_tree().current_scene.scene_file_path.split("/")[-1]
 		var nextScene
 		if curScene == "level0.tscn":
