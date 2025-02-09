@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cdhrsm0ncjnqk"]
+[gd_scene load_steps=16 format=3 uid="uid://cdhrsm0ncjnqk"]
 
 [ext_resource type="PackedScene" uid="uid://c8e45ixnq5udi" path="res://scenes/xylophone.tscn" id="1_6oknu"]
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_f0qkq"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://scripts/play_background.gd" id="7_fcxdv"]
 [ext_resource type="Texture2D" uid="uid://d2dmeo5t0ymat" path="res://assets/Green.png" id="9_74rrq"]
 [ext_resource type="Texture2D" uid="uid://bgfpuukppatll" path="res://assets/Red.png" id="10_6hkc8"]
+[ext_resource type="PackedScene" uid="uid://c1obylkuev73w" path="res://scenes/player.tscn" id="11_fpnsj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nacj1"]
 size = Vector2(243, 305)
@@ -17,6 +18,12 @@ size = Vector2(243, 305)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_asikx"]
 radius = 70.0
 height = 278.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mnqep"]
+size = Vector2(1905, 85.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jursc"]
+size = Vector2(57, 788)
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_f0qkq")
@@ -96,6 +103,22 @@ texture = ExtResource("9_74rrq")
 position = Vector2(761, 81)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("10_6hkc8")
+
+[node name="Player" parent="." instance=ExtResource("11_fpnsj")]
+position = Vector2(-25, 532)
+scale = Vector2(0.3, 0.3)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(772.5, 775.75)
+shape = SubResource("RectangleShape2D_mnqep")
+
+[node name="WallLeft" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
+position = Vector2(-42.5, 391)
+shape = SubResource("RectangleShape2D_jursc")
 
 [connection signal="xylophone_note" from="Xylophone" to="." method="_on_xylophone_note"]
 [connection signal="mouse_entered" from="Door" to="Door" method="_on_mouse_entered"]

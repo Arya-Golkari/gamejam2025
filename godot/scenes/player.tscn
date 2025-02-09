@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 [gd_scene load_steps=4 format=3 uid="uid://3ln84vs4y8d5"]
+=======
+[gd_scene load_steps=6 format=3 uid="uid://c1obylkuev73w"]
+>>>>>>> f7125b5 (Player kinematics)
 
 [ext_resource type="Texture2D" uid="uid://jib20dhuco7m" path="res://assets/Mainchar.png" id="1_ffalo"]
+[ext_resource type="Texture2D" uid="uid://djub0lr073vuf" path="res://assets/Mainchar_idle.png" id="2_1q1am"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_xiukj"]
+[ext_resource type="Texture2D" uid="uid://dinkr4e2eu7sk" path="res://assets/Maincharjump.png" id="3_7h6gx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a3ajk"]
 size = Vector2(360.25, 619.75)
@@ -11,6 +17,8 @@ size = Vector2(360.25, 619.75)
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(300, 300)
 script = ExtResource("2_xiukj")
+walking = ExtResource("2_1q1am")
+jumping = ExtResource("3_7h6gx")
 
 [node name="Sprite" type="Sprite2D" parent="Player"]
 position = Vector2(143, 75)
