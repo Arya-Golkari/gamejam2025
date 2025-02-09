@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=3 uid="uid://7pyej7bxnrwc"]
 
 [ext_resource type="Script" path="res://scripts/select.gd" id="1_3tt1i"]
-[ext_resource type="Texture2D" uid="uid://bomrjv666phi4" path="res://assets/playbutton.png" id="3_pk3g7"]
+[ext_resource type="Texture2D" uid="uid://iucc6bj104wa" path="res://assets/playbutton.png" id="3_pk3g7"]
 [ext_resource type="Script" path="res://scenes/animated_sprite_2d.gd" id="3_yslg3"]
+[ext_resource type="Texture2D" uid="uid://bjo1tamaq87dk" path="res://assets/title2(3).png" id="5_ewjhg"]
 [ext_resource type="Texture2D" uid="uid://brlq0sgoadxs" path="res://assets/backgroundmaij.png" id="5_hibnb"]
-[ext_resource type="Texture2D" uid="uid://c6s38nk47he48" path="res://assets/title2.png" id="5_rqn1h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lcocd"]
 atlas = ExtResource("3_pk3g7")
@@ -96,8 +96,9 @@ scale = Vector2(3.03125, 3.34146)
 texture = ExtResource("5_hibnb")
 
 [node name="Title2" type="Sprite2D" parent="."]
-position = Vector2(752, 153)
-scale = Vector2(2.58333, 2.8)
-texture = ExtResource("5_rqn1h")
+texture_filter = 1
+position = Vector2(752, 136)
+scale = Vector2(10.7024, 11.6)
+texture = ExtResource("5_ewjhg")
 
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
