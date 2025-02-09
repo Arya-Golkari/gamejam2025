@@ -8,8 +8,8 @@
 [ext_resource type="AudioStream" uid="uid://ccqmtayv4t2rk" path="res://audio/xylophone/204644__juancamiloorjuela__xylophone-e4.wav" id="5_bey0r"]
 [ext_resource type="Texture2D" uid="uid://ddu1s2gbxxxtl" path="res://assets/closeddoor.png" id="6_xmi5c"]
 [ext_resource type="Script" path="res://scripts/play_background.gd" id="7_fcxdv"]
-[ext_resource type="Texture2D" uid="uid://mjuhnedfce0p" path="res://assets/Greentorchf.png" id="9_8ad2m"]
-[ext_resource type="Texture2D" uid="uid://maaxpoiychqv" path="res://assets/Redtorch.png" id="10_wmhv3"]
+[ext_resource type="Texture2D" uid="uid://d2dmeo5t0ymat" path="res://assets/Green.png" id="9_74rrq"]
+[ext_resource type="Texture2D" uid="uid://bgfpuukppatll" path="res://assets/Red.png" id="10_6hkc8"]
 [ext_resource type="PackedScene" uid="uid://c1obylkuev73w" path="res://scenes/player.tscn" id="11_fpnsj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nacj1"]
@@ -75,34 +75,34 @@ position = Vector2(1112, 510)
 shape = SubResource("CapsuleShape2D_asikx")
 
 [node name="Green" type="Sprite2D" parent="."]
-position = Vector2(82.3, 267.7)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("9_8ad2m")
-
-[node name="Green2" type="Sprite2D" parent="."]
-position = Vector2(304.3, 264.7)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("9_8ad2m")
-
-[node name="Green3" type="Sprite2D" parent="."]
-position = Vector2(386.3, 266.7)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("9_8ad2m")
+position = Vector2(101, 78)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("9_74rrq")
 
 [node name="Red" type="Sprite2D" parent="."]
-position = Vector2(153.3, 270.7)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("10_wmhv3")
-
-[node name="Red3" type="Sprite2D" parent="."]
-position = Vector2(463.3, 269.7)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("10_wmhv3")
+position = Vector2(235, 80)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_6hkc8")
 
 [node name="Red2" type="Sprite2D" parent="."]
-position = Vector2(225.3, 268.7)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("10_wmhv3")
+position = Vector2(365, 83)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_6hkc8")
+
+[node name="Green2" type="Sprite2D" parent="."]
+position = Vector2(499, 81)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("9_74rrq")
+
+[node name="Green3" type="Sprite2D" parent="."]
+position = Vector2(631, 81)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("9_74rrq")
+
+[node name="Red3" type="Sprite2D" parent="."]
+position = Vector2(761, 81)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_6hkc8")
 
 [node name="Player" parent="." instance=ExtResource("11_fpnsj")]
 position = Vector2(643, 529)
