@@ -16,9 +16,13 @@ var fanfare_done : bool = false
 @onready var background : Sprite2D = $Background
 @onready var player : Node2D = $Player
 @onready var wall_left : Node2D = $WallLeft
+@onready var line1 : Node2D = $Line1
+@onready var line2: Node2D = $Line2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	line1.visible = false
+	line2.visible = false
 	background.texture = closed_door
 	fanfare_player = get_node(fanfare_player_path)
 	
@@ -34,6 +38,10 @@ func _ready() -> void:
 		await get_tree().create_timer(0.01).timeout
 		player.position = Vector2(position_x, player.position.y)
 		wall_left.position = Vector2(position_x + 40, wall_left.position.y)
+		
+	line1.visible = true
+	await get_tree().create_timer(5).timeout
+	line1.visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -48,6 +56,12 @@ func _process(delta: float) -> void:
 		
 		await timer.timeout
 		background.texture = open_door
+		
+		await get_tree().create_timer(1).timeout
+		line2.visible = true
+		
+		await get_tree().create_timer(3).timeout
+		line2.visible = false
 		
 		done = false
 
@@ -94,10 +108,12 @@ func _on_xylophone_note(note: String) -> void:
 
 
 func _on_play_background() -> void:
+	line1.visible = false
 	if not fanfare_done:
 		background_music()
 
 
 func _on_player_ready_to_leave() -> void:
+	line1.visible = false
 	if fanfare_done:
 		get_tree().change_scene_to_file("res://scenes/level2.tscn")

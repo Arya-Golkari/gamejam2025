@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cdhrsm0ncjnqk"]
+[gd_scene load_steps=18 format=3 uid="uid://cdhrsm0ncjnqk"]
 
 [ext_resource type="PackedScene" uid="uid://c8e45ixnq5udi" path="res://scenes/xylophone.tscn" id="1_6oknu"]
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_f0qkq"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://dsoimlpxbnexl" path="res://assets/Greentorchf.png" id="9_8ad2m"]
 [ext_resource type="Texture2D" uid="uid://bn67bb3l0ukab" path="res://assets/Redtorch.png" id="10_wmhv3"]
 [ext_resource type="PackedScene" uid="uid://c1obylkuev73w" path="res://scenes/player.tscn" id="11_fpnsj"]
+[ext_resource type="Texture2D" uid="uid://tmjmv0ykv36i" path="res://assets/skeletonline1room1.png" id="12_ajdyq"]
+[ext_resource type="Texture2D" uid="uid://b2vqvis1ajs77" path="res://assets/Skeletonfinalline.png" id="13_nkrs7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nacj1"]
 size = Vector2(243, 305)
@@ -32,7 +34,7 @@ closed_door = ExtResource("6_xmi5c")
 open_door = ExtResource("3_b7fb4")
 
 [node name="Xylophone" parent="." instance=ExtResource("1_6oknu")]
-position = Vector2(871, 140)
+position = Vector2(867, 156)
 scale = Vector2(0.25, 0.25)
 
 [node name="Fanfare" type="AudioStreamPlayer" parent="."]
@@ -125,6 +127,18 @@ shape = SubResource("RectangleShape2D_jursc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
 position = Vector2(1477, 390)
 shape = SubResource("RectangleShape2D_jursc")
+
+[node name="Line1" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(736, 624)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_ajdyq")
+
+[node name="Line2" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(737, 624)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("13_nkrs7")
 
 [connection signal="xylophone_note" from="Xylophone" to="." method="_on_xylophone_note"]
 [connection signal="mouse_entered" from="Door" to="Door" method="_on_mouse_entered"]

@@ -1,42 +1,61 @@
-[gd_scene load_steps=8 format=3 uid="uid://cs1xujs0dda45"]
+[gd_scene load_steps=8 format=3 uid="uid://blks4y1kgdt6o"]
 
-[ext_resource type="Script" path="res://scripts/nav.gd" id="1_amtew"]
-[ext_resource type="Texture2D" uid="uid://cuwd0xhivwv2s" path="res://assets/gigachad.jpg" id="1_cy1qb"]
-[ext_resource type="Script" path="res://scripts/player.gd" id="2_hffgy"]
-[ext_resource type="PackedScene" uid="uid://c8e45ixnq5udi" path="res://scenes/xylophone.tscn" id="4_akv5a"]
+[ext_resource type="Script" path="res://scripts/level_0.gd" id="1_7p3al"]
 [ext_resource type="Texture2D" uid="uid://ddu1s2gbxxxtl" path="res://assets/closeddoor.png" id="5_420x3"]
+[ext_resource type="Script" path="res://scripts/play_background.gd" id="8_8bl36"]
+[ext_resource type="PackedScene" uid="uid://c1obylkuev73w" path="res://scenes/player.tscn" id="11_kn7yb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvg63"]
-size = Vector2(64.5, 119.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nacj1"]
+size = Vector2(243, 735)
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jx8xh"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mnqep"]
+size = Vector2(1905, 85.5)
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource("1_amtew")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jursc"]
+size = Vector2(57, 788)
 
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(300, 300)
-script = ExtResource("2_hffgy")
+[node name="Level0" type="Node2D"]
+script = ExtResource("1_7p3al")
 
-[node name="Sprite" type="Sprite2D" parent="Player"]
-scale = Vector2(0.140295, 0.328169)
-texture = ExtResource("1_cy1qb")
+[node name="Timer" type="Timer" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("RectangleShape2D_bvg63")
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(717, 405)
+scale = Vector2(3.05, 3.05)
+texture = ExtResource("5_420x3")
+metadata/_edit_lock_ = true
+
+[node name="Door" type="Area2D" parent="."]
+script = ExtResource("8_8bl36")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2(717.5, 363.5)
+shape = SubResource("RectangleShape2D_nacj1")
+
+[node name="Player" parent="." instance=ExtResource("11_kn7yb")]
+position = Vector2(599, 528)
+scale = Vector2(0.3, 0.3)
 
 [node name="Ground" type="StaticBody2D" parent="."]
-position = Vector2(1001, 1097)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2(-1, -15)
-shape = SubResource("WorldBoundaryShape2D_jx8xh")
+position = Vector2(772.5, 775.75)
+shape = SubResource("RectangleShape2D_mnqep")
 
-[node name="Xylophone" parent="." instance=ExtResource("4_akv5a")]
+[node name="WallLeft" type="StaticBody2D" parent="."]
 
-[node name="Closeddoor" type="Sprite2D" parent="."]
-z_index = -1
-texture_filter = 1
-position = Vector2(1038.75, 621)
-scale = Vector2(4.33438, 4.61482)
-texture = ExtResource("5_420x3")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
+position = Vector2(-42.5, 391)
+shape = SubResource("RectangleShape2D_jursc")
+
+[node name="WallRight" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
+position = Vector2(1477, 390)
+shape = SubResource("RectangleShape2D_jursc")
+
+[connection signal="mouse_entered" from="Door" to="Door" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Door" to="Door" method="_on_mouse_exited"]
+[connection signal="play_background" from="Door" to="." method="_on_play_background"]
+[connection signal="ready_to_leave" from="Player" to="." method="_on_player_ready_to_leave"]
