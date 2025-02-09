@@ -105,4 +105,4 @@ func _on_play_background() -> void:
 
 func _on_player_ready_to_leave() -> void:
 	if fanfare_done:
-		get_tree().change_scene_to_file("res://scenes/level3.tscn")
+		get_tree().change_scene_to_file("res://scenes/gg.tscn")

@@ -8,8 +8,8 @@
 [ext_resource type="AudioStream" uid="uid://ccqmtayv4t2rk" path="res://audio/xylophone/204644__juancamiloorjuela__xylophone-e4.wav" id="5_bey0r"]
 [ext_resource type="Texture2D" uid="uid://ddu1s2gbxxxtl" path="res://assets/closeddoor.png" id="6_xmi5c"]
 [ext_resource type="Script" path="res://scripts/play_background.gd" id="7_fcxdv"]
-[ext_resource type="Texture2D" uid="uid://mjuhnedfce0p" path="res://assets/Greentorchf.png" id="9_8ad2m"]
-[ext_resource type="Texture2D" uid="uid://maaxpoiychqv" path="res://assets/Redtorch.png" id="10_wmhv3"]
+[ext_resource type="Texture2D" uid="uid://dsoimlpxbnexl" path="res://assets/Greentorchf.png" id="9_8ad2m"]
+[ext_resource type="Texture2D" uid="uid://bn67bb3l0ukab" path="res://assets/Redtorch.png" id="10_wmhv3"]
 [ext_resource type="PackedScene" uid="uid://c1obylkuev73w" path="res://scenes/player.tscn" id="11_fpnsj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nacj1"]
