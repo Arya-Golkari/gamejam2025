@@ -1,8 +1,13 @@
 [gd_scene load_steps=13 format=3 uid="uid://7pyej7bxnrwc"]
 
 [ext_resource type="Script" path="res://scripts/select.gd" id="1_3tt1i"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://bn0oe5xa8mdv4" path="res://assets/Title.png" id="2_8v5pc"]
 [ext_resource type="Texture2D" uid="uid://bomrjv666phi4" path="res://assets/playbutton.png" id="3_pk3g7"]
+=======
+[ext_resource type="Texture2D" uid="uid://blulq38i6qldi" path="res://assets/Title.png" id="2_8v5pc"]
+[ext_resource type="Texture2D" uid="uid://7lm6hk67h11e" path="res://assets/playbutton.png" id="3_pk3g7"]
+>>>>>>> cd4794c (New xylophone)
 [ext_resource type="Script" path="res://scenes/animated_sprite_2d.gd" id="3_yslg3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lcocd"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://c8e45ixnq5udi"]
 
 [ext_resource type="Script" path="res://scripts/xylophone.gd" id="1_5omqo"]
-[ext_resource type="Texture2D" uid="uid://c683nn8rhham6" path="res://assets/xylophone.png" id="2_wvdly"]
+[ext_resource type="Texture2D" uid="uid://b7tol8wtruqpm" path="res://assets/Xylophonealtfinal.png" id="2_gujss"]
 [ext_resource type="AudioStream" uid="uid://dpec5jws8ypco" path="res://audio/xylophone/204646__juancamiloorjuela__xylophone-c4.wav" id="3_h2r2r"]
 [ext_resource type="Script" path="res://scripts/xylophone_player.gd" id="3_pkcqx"]
 [ext_resource type="AudioStream" uid="uid://bcd3bxh04gd0o" path="res://audio/xylophone/204645__juancamiloorjuela__xylophone-d4.wav" id="5_y5uu0"]
@@ -19,10 +19,10 @@ size = Vector2(18.6667, 81.8333)
 size = Vector2(20.3333, 72.3333)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oscxk"]
-size = Vector2(20.5, 58.6667)
+size = Vector2(19, 58.6667)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27kgx"]
-size = Vector2(21.3333, 50.8333)
+size = Vector2(20, 50.8333)
 
 [node name="Xylophone" type="Node2D"]
 script = ExtResource("1_5omqo")
@@ -30,7 +30,7 @@ script = ExtResource("1_5omqo")
 [node name="Xylophone" type="Sprite2D" parent="."]
 position = Vector2(1000, 530)
 scale = Vector2(6, 6)
-texture = ExtResource("2_wvdly")
+texture = ExtResource("2_gujss")
 
 [node name="C4" type="Area2D" parent="Xylophone"]
 script = ExtResource("3_pkcqx")
@@ -65,7 +65,7 @@ note = "F4"
 audio_player_path = NodePath("../XylophoneF4Player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Xylophone/F4"]
-position = Vector2(23.4167, 0.333344)
+position = Vector2(23.3333, 0.333344)
 shape = SubResource("RectangleShape2D_oscxk")
 
 [node name="G4" type="Area2D" parent="Xylophone"]
@@ -74,7 +74,7 @@ note = "G4"
 audio_player_path = NodePath("../XylophoneG4Player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Xylophone/G4"]
-position = Vector2(51, -0.0833282)
+position = Vector2(51.6667, -0.0833206)
 shape = SubResource("RectangleShape2D_27kgx")
 
 [node name="XylophoneC4Player" type="AudioStreamPlayer" parent="Xylophone"]

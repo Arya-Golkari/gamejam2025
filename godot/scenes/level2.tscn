@@ -9,9 +9,9 @@
 [ext_resource type="AudioStream" uid="uid://6q8efeu1vr7c" path="res://audio/xylophone/204648__juancamiloorjuela__xylophone-g4.wav" id="6_ohwbx"]
 [ext_resource type="AudioStream" uid="uid://ccqmtayv4t2rk" path="res://audio/xylophone/204644__juancamiloorjuela__xylophone-e4.wav" id="7_u8waj"]
 [ext_resource type="Script" path="res://scripts/play_background.gd" id="8_3dtdq"]
-[ext_resource type="Texture2D" uid="uid://d2dmeo5t0ymat" path="res://assets/Green.png" id="9_bjbsy"]
-[ext_resource type="Texture2D" uid="uid://bgfpuukppatll" path="res://assets/Red.png" id="10_qwnot"]
-[ext_resource type="Texture2D" uid="uid://blqs17fw8cbnf" path="res://assets/Blue.png" id="11_mdq2m"]
+[ext_resource type="Texture2D" uid="uid://mjuhnedfce0p" path="res://assets/Greentorchf.png" id="10_w6kqy"]
+[ext_resource type="Texture2D" uid="uid://maaxpoiychqv" path="res://assets/Redtorch.png" id="11_uty2f"]
+[ext_resource type="Texture2D" uid="uid://b5afq28kmtmdb" path="res://assets/Bluetorch.png" id="12_w3c88"]
 [ext_resource type="PackedScene" uid="uid://c1obylkuev73w" path="res://scenes/player.tscn" id="13_twwih"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nacj1"]
@@ -83,39 +83,39 @@ position = Vector2(1112, 510)
 shape = SubResource("CapsuleShape2D_asikx")
 
 [node name="Green" type="Sprite2D" parent="."]
-position = Vector2(223, 80)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("9_bjbsy")
-
-[node name="Red" type="Sprite2D" parent="."]
-position = Vector2(87, 79)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("10_qwnot")
-
-[node name="Red2" type="Sprite2D" parent="."]
-position = Vector2(898, 80)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("10_qwnot")
+position = Vector2(130, 266)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_w6kqy")
 
 [node name="Green2" type="Sprite2D" parent="."]
-position = Vector2(494, 81)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("9_bjbsy")
+position = Vector2(271, 265)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_w6kqy")
 
 [node name="Green3" type="Sprite2D" parent="."]
-position = Vector2(750, 81)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("9_bjbsy")
+position = Vector2(415, 265)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_w6kqy")
+
+[node name="Red" type="Sprite2D" parent="."]
+position = Vector2(58, 269)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_uty2f")
+
+[node name="Red2" type="Sprite2D" parent="."]
+position = Vector2(486, 270)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_uty2f")
 
 [node name="Blue" type="Sprite2D" parent="."]
-position = Vector2(357, 81)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("11_mdq2m")
+position = Vector2(199, 267)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("12_w3c88")
 
 [node name="Blue2" type="Sprite2D" parent="."]
-position = Vector2(619, 79)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("11_mdq2m")
+position = Vector2(342, 267)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("12_w3c88")
 
 [node name="WallLeft" type="StaticBody2D" parent="."]
 

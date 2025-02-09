@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 			
 		get_tree().change_scene_to_file(nextScene)
 		
-	if (520 < global_position.x) and (global_position.x < 660) and (not is_on_floor()):
+	if (520 < global_position.x) and (global_position.x < 760) and (not is_on_floor()):
 		emit_signal("ready_to_leave")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
