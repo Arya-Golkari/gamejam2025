@@ -16,6 +16,8 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_axis("Left", "Right")
 	velocity.x = speed * direction
+	if direction:
+		sprite.flip_h = direction < 0
 
 	velocity += delta * get_gravity() * 10
 	
